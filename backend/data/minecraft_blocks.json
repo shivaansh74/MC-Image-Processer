@@ -1,0 +1,382 @@
+[
+  {
+    "name": "Stone",
+    "color": [
+      125,
+      125,
+      125
+    ],
+    "texture_variance": 5,
+    "is_transparent": false
+  },
+  {
+    "name": "Grass Block",
+    "color": [
+      95,
+      159,
+      53
+    ],
+    "texture_variance": 10,
+    "is_transparent": false
+  },
+  {
+    "name": "Dirt",
+    "color": [
+      134,
+      96,
+      67
+    ],
+    "texture_variance": 5,
+    "is_transparent": false
+  },
+  {
+    "name": "Cobblestone",
+    "color": [
+      123,
+      123,
+      123
+    ],
+    "texture_variance": 10,
+    "is_transparent": false
+  },
+  {
+    "name": "Oak Planks",
+    "color": [
+      162,
+      130,
+      78
+    ],
+    "texture_variance": 5,
+    "is_transparent": false
+  },
+  {
+    "name": "Spruce Planks",
+    "color": [
+      104,
+      78,
+      47
+    ],
+    "texture_variance": 5,
+    "is_transparent": false
+  },
+  {
+    "name": "Birch Planks",
+    "color": [
+      196,
+      179,
+      123
+    ],
+    "texture_variance": 5,
+    "is_transparent": false
+  },
+  {
+    "name": "Sand",
+    "color": [
+      219,
+      209,
+      160
+    ],
+    "texture_variance": 5,
+    "is_transparent": false
+  },
+  {
+    "name": "Gravel",
+    "color": [
+      127,
+      127,
+      127
+    ],
+    "texture_variance": 10,
+    "is_transparent": false
+  },
+  {
+    "name": "Gold Block",
+    "color": [
+      249,
+      236,
+      79
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Iron Block",
+    "color": [
+      220,
+      220,
+      220
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Coal Block",
+    "color": [
+      19,
+      19,
+      19
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Oak Log",
+    "color": [
+      107,
+      84,
+      51
+    ],
+    "texture_variance": 7,
+    "is_transparent": false
+  },
+  {
+    "name": "Oak Leaves",
+    "color": [
+      60,
+      192,
+      41
+    ],
+    "texture_variance": 15,
+    "is_transparent": true
+  },
+  {
+    "name": "Sponge",
+    "color": [
+      207,
+      203,
+      80
+    ],
+    "texture_variance": 5,
+    "is_transparent": false
+  },
+  {
+    "name": "Glass",
+    "color": [
+      175,
+      213,
+      228
+    ],
+    "texture_variance": 5,
+    "is_transparent": true
+  },
+  {
+    "name": "Lapis Block",
+    "color": [
+      39,
+      67,
+      138
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Sandstone",
+    "color": [
+      217,
+      201,
+      157
+    ],
+    "texture_variance": 5,
+    "is_transparent": false
+  },
+  {
+    "name": "White Wool",
+    "color": [
+      233,
+      236,
+      236
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Orange Wool",
+    "color": [
+      240,
+      118,
+      19
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Magenta Wool",
+    "color": [
+      189,
+      68,
+      179
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Light Blue Wool",
+    "color": [
+      58,
+      175,
+      217
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Yellow Wool",
+    "color": [
+      248,
+      197,
+      39
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Lime Wool",
+    "color": [
+      112,
+      185,
+      25
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Pink Wool",
+    "color": [
+      237,
+      141,
+      172
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Gray Wool",
+    "color": [
+      62,
+      68,
+      71
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Light Gray Wool",
+    "color": [
+      142,
+      142,
+      134
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Cyan Wool",
+    "color": [
+      21,
+      137,
+      145
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Purple Wool",
+    "color": [
+      121,
+      42,
+      172
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Blue Wool",
+    "color": [
+      53,
+      57,
+      157
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Brown Wool",
+    "color": [
+      114,
+      71,
+      40
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Green Wool",
+    "color": [
+      84,
+      109,
+      27
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Red Wool",
+    "color": [
+      160,
+      39,
+      34
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Black Wool",
+    "color": [
+      20,
+      21,
+      25
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Redstone Block",
+    "color": [
+      175,
+      24,
+      5
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Diamond Block",
+    "color": [
+      98,
+      219,
+      214
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Emerald Block",
+    "color": [
+      42,
+      203,
+      88
+    ],
+    "texture_variance": 2,
+    "is_transparent": false
+  },
+  {
+    "name": "Water",
+    "color": [
+      63,
+      118,
+      228
+    ],
+    "texture_variance": 10,
+    "is_transparent": true
+  }
+]

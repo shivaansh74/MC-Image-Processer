@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add these rules to your global CSS file */
+
+/* Make fullscreen elements properly fill the screen */
+:fullscreen, ::backdrop {
+  background-color: #333;
+}
+
+/* Adjust for webkit browsers */
+:-webkit-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Hide scrollbars in fullscreen mode */
+:fullscreen {
+  overflow: hidden;
+}
+
+/* Minecraft button style */
+.mc-button {
+  @apply bg-gray-600 text-white font-bold py-2 px-4 border-b-4 border-gray-900 hover:bg-gray-500 active:border-b-2 active:mt-0.5 active:mb-0.5;
+  text-shadow: 2px 2px #000;
+}
+
+.mc-button.primary {
+  @apply bg-green-700 border-green-900 hover:bg-green-600;
+}
+
+/* Minecraft panel with texture */
+.mc-panel {
+  @apply bg-gray-800 border-2 border-black;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Minecraft themed backgrounds */
+.mc-dirt-bg {
+  background-color: #8B4513;
+  background-image: 
+    linear-gradient(45deg, #5a3d25 25%, transparent 25%, transparent 75%, #5a3d25 75%, #5a3d25),
+    linear-gradient(45deg, #5a3d25 25%, transparent 25%, transparent 75%, #5a3d25 75%, #5a3d25);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+.mc-stone-bg {
+  background-color: #828282;
+  background-image: 
+    linear-gradient(45deg, #707070 25%, transparent 25%, transparent 75%, #707070 75%, #707070),
+    linear-gradient(45deg, #707070 25%, transparent 25%, transparent 75%, #707070 75%, #707070);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+.mc-grid-pattern {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Fullscreen controls */
+.mc-fullscreen-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 50;
+  display: flex;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Minecraft style heading */
+.mc-heading {
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px #3f3f3f;
+  letter-spacing: 0.5px;
+}
+
+/* Enhanced Minecraft dirt block texture */
+.mc-dirt-block {
+  background-color: #866043;
+  position: relative;
+  background-image: 
+    /* Dark spots layer 1 */
+    radial-gradient(circle at 25% 25%, rgba(71, 43, 20, 0.7) 2%, transparent 7%),
+    radial-gradient(circle at 75% 32%, rgba(71, 43, 20, 0.7) 2%, transparent 6%),
+    radial-gradient(circle at 87% 65%, rgba(71, 43, 20, 0.7) 3%, transparent 7%),
+    radial-gradient(circle at 32% 82%, rgba(71, 43, 20, 0.7) 3%, transparent 6%),
+    radial-gradient(circle at 58% 54%, rgba(71, 43, 20, 0.7) 2%, transparent 5%),
+    /* Dark spots layer 2 */
+    radial-gradient(circle at 12% 15%, rgba(51, 33, 18, 0.7) 1%, transparent 5%),
+    radial-gradient(circle at 42% 45%, rgba(51, 33, 18, 0.7) 1%, transparent 4%),
+    radial-gradient(circle at 69% 68%, rgba(51, 33, 18, 0.7) 2%, transparent 6%),
+    radial-gradient(circle at 92% 22%, rgba(51, 33, 18, 0.7) 1%, transparent 4%),
+    /* Light spots */
+    radial-gradient(circle at 18% 58%, rgba(160, 120, 80, 0.7) 1%, transparent 4%),
+    radial-gradient(circle at 43% 28%, rgba(160, 120, 80, 0.7) 1%, transparent 3%),
+    radial-gradient(circle at 79% 81%, rgba(160, 120, 80, 0.7) 1%, transparent 4%),
+    /* Main texture */
+    repeating-linear-gradient(
+      45deg,
+      rgba(120, 85, 55, 0.2) 0px,
+      rgba(120, 85, 55, 0.2) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(120, 85, 55, 0.1) 0px,
+      rgba(120, 85, 55, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+}
+
+.mc-dirt-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    /* Noise overlay */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.3' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  z-index: 1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Border style to mimic Minecraft block edges */
+.mc-block-border {
+  border-top: 4px solid rgba(255, 255, 255, 0.15);
+  border-left: 4px solid rgba(255, 255, 255, 0.1);
+  border-right: 4px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}

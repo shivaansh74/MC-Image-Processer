@@ -1,0 +1,219 @@
+/* Enhanced Minecraft block textures */
+
+.block-texture {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  image-rendering: pixelated;
+  box-sizing: border-box;
+}
+
+/* Stone-like blocks */
+.block-texture-stone {
+  background-color: #7a7a7a;
+  background-image: 
+    radial-gradient(circle at 30% 30%, #868686 5%, transparent 5%),
+    radial-gradient(circle at 70% 65%, #686868 5%, transparent 5%),
+    radial-gradient(circle at 40% 50%, #757575 3%, transparent 3%),
+    radial-gradient(circle at 60% 20%, #6d6d6d 2%, transparent 2%);
+}
+
+.block-texture-cobblestone {
+  background-color: #797979;
+  background-image: 
+    linear-gradient(45deg, #656565 25%, transparent 25%),
+    linear-gradient(-45deg, #696969 20%, transparent 20%),
+    radial-gradient(circle at 40% 45%, #656565 6%, transparent 6%),
+    radial-gradient(circle at 70% 65%, #5d5d5d 10%, transparent 10%);
+  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.2), 
+              inset -2px -2px 0 rgba(0,0,0,0.2);
+}
+
+/* Wood and plant blocks */
+.block-texture-dirt {
+  background-color: #866043;
+  background-image: 
+    radial-gradient(circle at 20% 25%, #8d6c4f 10%, transparent 10%),
+    radial-gradient(circle at 50% 65%, #74563a 15%, transparent 15%),
+    radial-gradient(circle at 80% 20%, #7c5b3c 8%, transparent 8%);
+}
+
+.block-texture-grass_block {
+  background: linear-gradient(to bottom, #5f9f35 70%, #866043 70%);
+  background-image: 
+    linear-gradient(to bottom, #5f9f35 70%, #866043 70%),
+    radial-gradient(circle at 25% 10%, #6aa539 10%, transparent 10%),
+    radial-gradient(circle at 60% 30%, #538a30 8%, transparent 8%),
+    radial-gradient(circle at 40% 80%, #74563a 8%, transparent 8%),
+    radial-gradient(circle at 75% 90%, #7c5b3c 6%, transparent 6%);
+}
+
+.block-texture-oak_planks {
+  background-color: #a28250;
+  background-image: 
+    linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 2%, transparent 2%, transparent 98%, rgba(0,0,0,0.1) 98%),
+    linear-gradient(rgba(0,0,0,0.05) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 2px, transparent 2px),
+    linear-gradient(rgba(95,75,45,0.1) 1px, transparent 1px);
+  background-size: 100% 100%, 16px 16px, 16px 16px, 8px 8px;
+}
+
+.block-texture-spruce_planks {
+  background-color: #684e2f;
+  background-image: 
+    linear-gradient(90deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.15) 2%, transparent 2%, transparent 98%, rgba(0,0,0,0.15) 98%),
+    linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0,0,0,0.1) 2px, transparent 2px),
+    linear-gradient(rgba(60,45,25,0.1) 1px, transparent 1px);
+  background-size: 100% 100%, 16px 16px, 16px 16px, 8px 8px;
+}
+
+.block-texture-birch_planks {
+  background-color: #c4b37b;
+  background-image: 
+    linear-gradient(90deg, rgba(0,0,0,0.07) 0%, rgba(0,0,0,0.07) 2%, transparent 2%, transparent 98%, rgba(0,0,0,0.07) 98%),
+    linear-gradient(rgba(0,0,0,0.05) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 2px, transparent 2px),
+    linear-gradient(rgba(140,125,80,0.15) 1px, transparent 1px);
+  background-size: 100% 100%, 16px 16px, 16px 16px, 8px 8px;
+}
+
+/* Sand and gravel */
+.block-texture-sand {
+  background-color: #dbd1a0;
+  background-image: 
+    radial-gradient(circle at 15% 15%, #e3daa8 8%, transparent 8%),
+    radial-gradient(circle at 45% 45%, #d0c696 6%, transparent 6%),
+    radial-gradient(circle at 75% 30%, #cec395 7%, transparent 7%),
+    radial-gradient(circle at 60% 70%, #d5ca9a 5%, transparent 5%);
+}
+
+.block-texture-gravel {
+  background-color: #7f7f7f;
+  background-image: 
+    linear-gradient(45deg, #767676 25%, transparent 25%, transparent 75%, #767676 75%),
+    linear-gradient(-45deg, #6a6a6a 30%, transparent 30%, transparent 70%, #6a6a6a 70%),
+    radial-gradient(circle at 25% 65%, #727272 8%, transparent 8%),
+    radial-gradient(circle at 75% 35%, #6c6c6c 8%, transparent 8%);
+  background-size: 16px 16px, 16px 16px, 16px 16px, 16px 16px;
+}
+
+/* Metal blocks */
+.block-texture-gold_block {
+  background: linear-gradient(45deg, #ebd947 0%, #f9ec4f 25%, #ffeb3b 50%, #f9ec4f 75%, #ebd947 100%);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.6), 
+              inset 0 0 5px #fff9c4;
+}
+
+.block-texture-iron_block {
+  background: linear-gradient(45deg, #c7c7c7 0%, #dcdcdc 25%, #e8e8e8 50%, #dcdcdc 75%, #c7c7c7 100%);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.5), 
+              inset 0 0 5px #f5f5f5;
+}
+
+.block-texture-coal_block {
+  background-color: #131313;
+  background-image: 
+    linear-gradient(135deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%),
+    radial-gradient(circle at 30% 40%, #0c0c0c 5%, transparent 5%),
+    radial-gradient(circle at 70% 60%, #0c0c0c 3%, transparent 3%);
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.8);
+}
+
+/* Nature blocks */
+.block-texture-oak_log {
+  background-color: #6b5433;
+  background-image: 
+    linear-gradient(90deg, #61482a 20%, #6b5433 20%, #6b5433 80%, #61482a 80%),
+    repeating-linear-gradient(0deg, #5d4a2d, #5d4a2d 3px, #6b5433 3px, #6b5433 6px);
+}
+
+.block-texture-oak_leaves {
+  background-color: #3cc029;
+  position: relative;
+  overflow: hidden;
+}
+
+.block-texture-oak_leaves::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #4cd137 10%, transparent 10%),
+    radial-gradient(circle at 75% 75%, #44bd32 15%, transparent 15%),
+    radial-gradient(circle at 50% 50%, #20bf6b 8%, transparent 8%);
+  opacity: 0.7;
+}
+
+/* Special blocks */
+.block-texture-sponge {
+  background-color: #cfcb50;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #e1dd4a 15%, transparent 15%),
+    radial-gradient(circle at 75% 75%, #bfbc48 20%, transparent 20%),
+    radial-gradient(circle at 50% 50%, #dbd81a 10%, transparent 10%);
+}
+
+.block-texture-glass {
+  background-color: rgba(200, 230, 255, 0.3);
+  background-image:
+    linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255,255,255,0.2) 25%, transparent 25%);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.3), 
+              inset 0 0 20px rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.block-texture-lapis_block {
+  background-color: #27438a;
+  background-image: 
+    linear-gradient(45deg, #1c3578 25%, transparent 25%, transparent 75%, #1c3578 75%),
+    radial-gradient(circle at 50% 50%, #2c4d9e 10%, transparent 10%);
+  box-shadow: inset 0 0 10px rgba(30,60,180,0.4);
+}
+
+.block-texture-sandstone {
+  background-color: #d9c99d;
+  background-image: 
+    linear-gradient(0deg, #d2bd8e 5%, transparent 5%, transparent 95%, #d2bd8e 95%),
+    repeating-linear-gradient(0deg, #d2bd8e, #d2bd8e 2px, #d9c99d 2px, #d9c99d 8px),
+    radial-gradient(circle at 30% 50%, #d2bd8e 5%, transparent 5%);
+}
+
+/* Wool colors with texture pattern */
+.block-texture-white_wool { background-color: #e9ecec; }
+.block-texture-orange_wool { background-color: #f07613; }
+.block-texture-magenta_wool { background-color: #bd44b3; }
+.block-texture-light_blue_wool { background-color: #3aafd9; }
+.block-texture-yellow_wool { background-color: #f8c527; }
+.block-texture-lime_wool { background-color: #70b919; }
+.block-texture-pink_wool { background-color: #ed8dac; }
+.block-texture-gray_wool { background-color: #3e4447; }
+.block-texture-light_gray_wool { background-color: #8e8e86; }
+.block-texture-cyan_wool { background-color: #158991; }
+.block-texture-purple_wool { background-color: #792aac; }
+.block-texture-blue_wool { background-color: #35399d; }
+.block-texture-brown_wool { background-color: #724728; }
+.block-texture-green_wool { background-color: #546d1b; }
+.block-texture-red_wool { background-color: #a02722; }
+.block-texture-black_wool { background-color: #141519; }
+
+/* Add a texture pattern to all wool blocks */
+[class*="block-texture-"][class*="_wool"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1) 4%, transparent 4%),
+    radial-gradient(circle at 70% 70%, rgba(0,0,0,0.1) 4%, transparent 4%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 6%, transparent 6%),
+    repeating-linear-gradient(45deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05) 2px, transparent 2px, transparent 8px),
+    repeating-linear-gradient(-45deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05) 2px, transparent 2px, transparent 8px);
+}

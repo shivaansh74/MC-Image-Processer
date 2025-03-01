@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+pillow>=10.0.0
+numpy
+scikit-learn
+opencv-python-headless
+nbtlib==1.12.1  # For .schematic file support
+pytest==7.3.1

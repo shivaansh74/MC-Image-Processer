@@ -1,0 +1,121 @@
+/* Minecraft UI Theme */
+
+@font-face {
+  font-family: 'MinecraftFont';
+  src: url('/fonts/minecraft.woff2') format('woff2'),
+       url('/fonts/minecraft.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --mc-dirt: #804020;
+  --mc-grass: #5da030;
+  --mc-stone: #7a7a7a;
+  --mc-planks: #bc9862;
+  --mc-water: #3a5dc8;
+  --mc-lava: #d84c00;
+  --mc-bedrock: #333333;
+  --mc-tnt: #dd3333;
+  --mc-obsidian: #150a1e;
+  
+  /* Button states */
+  --mc-button: #9b9b9b;
+  --mc-button-hover: #b0b0b0;
+  --mc-button-active: #c6c6c6;
+  --mc-button-border: #000;
+  --mc-button-disabled: #696969;
+}
+
+/* Minecraft block textures */
+.mc-grass-bg {
+  background-image: url('/images/grass_block_top.png');
+  background-repeat: repeat;
+}
+
+.mc-dirt-bg {
+  background-image: url('/images/dirt.png');
+  background-repeat: repeat;
+}
+
+.mc-stone-bg {
+  background-image: url('/images/stone.png');
+  background-repeat: repeat;
+}
+
+.mc-planks-bg {
+  background-image: url('/images/oak_planks.png');
+  background-repeat: repeat;
+}
+
+/* Minecraft UI elements */
+.mc-button {
+  font-family: 'MinecraftFont', sans-serif;
+  background-color: #999999;
+  color: #ffffff;
+  text-shadow: 2px 2px #3f3f3f;
+  border: 2px solid #000000;
+  border-bottom: 4px solid #000000;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.08s ease-in-out;
+}
+
+.mc-button:hover {
+  background-color: #aeaeae;
+}
+
+.mc-button:active {
+  background-color: #999999;
+  border-bottom: 2px solid #000000;
+  top: 2px;
+}
+
+.mc-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.mc-button.primary {
+  background-color: #5da030;
+}
+
+.mc-button.primary:hover {
+  background-color: #6eb43c;
+}
+
+.mc-button.danger {
+  background-color: #d84c00;
+}
+
+/* Minecraft headings */
+.mc-heading {
+  font-family: 'MinecraftFont', sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px #3f3f3f;
+}
+
+/* Minecraft panel */
+.mc-panel {
+  background-color: rgba(53, 53, 53, 0.8);
+  border: 2px solid #000000;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Fullscreen controls */
+.mc-fullscreen-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 50;
+  display: flex;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+}
