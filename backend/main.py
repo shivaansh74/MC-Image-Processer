@@ -20,10 +20,13 @@ os.makedirs("output", exist_ok=True)
 
 app = FastAPI(title="Minecraft Block Image Converter API")
 
-# Configure CORS
+# Configure CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Update this with your frontend URL in production
+    allow_origins=[
+        "http://localhost:3000",  # Local development
+        "https://image2mc.vercel.app",  # Replace with your Vercel domain
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
