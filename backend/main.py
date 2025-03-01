@@ -18,12 +18,12 @@ from app.services.image_processing.processor import process_image_to_minecraft_b
 # Create output directory if it doesn't exist
 os.makedirs("output", exist_ok=True)
 
-app = FastAPI(title="Minecraft Image Processor API")
+app = FastAPI(title="Minecraft Block Image Converter API")
 
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins
+    allow_origins=["*"],  # Update this with your frontend URL in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -34,7 +34,7 @@ app.mount("/output", StaticFiles(directory="output"), name="output")
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to Minecraft Image Processor API"}
+    return {"status": "active", "message": "Minecraft Image Processor API"}
 
 @app.post("/process-image", response_model=ProcessedImageResponse)
 async def process_image_endpoint(
@@ -85,4 +85,8 @@ async def process_image_endpoint(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run("main:app", 
+                host="0.0.0.0", 
+                port=port,
+                reload=True)
