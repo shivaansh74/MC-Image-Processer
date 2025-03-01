@@ -10,10 +10,15 @@ import uuid
 import shutil
 import time
 from typing import Optional
+import logging
 
 from services.image_processor import process_image_to_blocks
 from models.response_models import ProcessedImageResponse, GridSize
 from app.services.image_processing.processor import process_image_to_minecraft_blocks
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Create output directory if it doesn't exist
 os.makedirs("output", exist_ok=True)
@@ -26,6 +31,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",  # Local development
         "https://image2mc.vercel.app",  # Replace with your Vercel domain
+        "https://image2mc-git-main-shivaansh74.vercel.app"  # Preview deployments
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -39,7 +45,12 @@ app.mount("/output", StaticFiles(directory="output"), name="output")
 async def root():
     return {"status": "active", "message": "Minecraft Image Processor API"}
 
-@app.post("/process-image", response_model=ProcessedImageResponse)
+@app.get("/api/health")
+async def health_check():
+    logger.info("Health check endpoint called")
+    return {"status": "healthy"}
+
+@app.post("/api/process-image", response_model=ProcessedImageResponse)  # Note the /api prefix
 async def process_image_endpoint(
     image: bytes = File(...),
     x_grid_size: Optional[str] = Header(None)
@@ -47,6 +58,7 @@ async def process_image_endpoint(
     start_time = time.time()
     
     try:
+        logger.info("Starting image processing request")
         # Load image from bytes
         img = Image.open(io.BytesIO(image))
         
@@ -84,6 +96,7 @@ async def process_image_endpoint(
             blockGrid=block_grid
         )
     except Exception as e:
+        logger.error(f"Processing error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Image processing failed: {str(e)}")
 
 if __name__ == "__main__":
